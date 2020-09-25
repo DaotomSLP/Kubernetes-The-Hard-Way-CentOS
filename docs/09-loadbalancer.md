@@ -1,7 +1,7 @@
-# ติดตั้ง Loadbalancer สำหรับ master node
-master node แต่ละตัวถูกออกแบบให้สามารถทำงานแยกกันได้อย่างอิสระ ผู้ใช้งาน Kubernetes Cluster สามารถเชื่อมต่อไปใช้งานที่ master node ตัวไหนก็ได้ ดังนั้นเพื่อให้สะดวกกับการเชื่อมต่อไปยัง master node จึงนิยมให้มี loadbalancer ทำหน้าที่จัดการ loadbalancer ไปยัง master node แต่ละตัว ซึ่งผู้เขียนเลือกใช้ NGINX มาทำหน้าที่เป็น loadbalancer
+# ຕິດຕັ້ງ Loadbalancer ສຳລັບ master node
+master node ແຕ່ລະໂຕຖືກອອກແບບໃຫ້ສາມາດເຮັດວຽກແຍກກັນໄດ້ຢ່າງອິດສະຫຼະ ຜູ້ໃຊ້ງານ Kubernetes Cluster ສາມາດເຊື່ອມຕໍ່ໄປໃຊ້ງານທີ່ master node ໂຕໃດກໍ່ໄດ້ ດັງນັ້ນເພື່ອໃຫ້ສະດວກກັບການເຊື່ອມຕໍ່ໄປຍັງ master node ຈຶ່ງນິຍົມໃຫ້ມີ loadbalancer ເຮັດໜ້າທີ່ຈັດການ loadbalancer ໄປຍັງ master node ແຕ່ລະໂຕ ເຊິ່ງຜູ້ຂຽນເລືອກໃຊ້ NGINX ມາເຮັດໜ້າທີ່ເປັນ loadbalancer
 
-## ขั้นตอนการติดตั้ง NGINX [loadbalancer node]
+## ຂັ້ນຕອນການຕິດຕັ້ງ NGINX [loadbalancer node]
 ```
 yum install -y nginx
 echo " 
@@ -19,6 +19,6 @@ stream{
 " >> /etc/nginx/nginx.conf
 systemctl enable --now nginx
 ```
-**Next>** [ติดตั้ง Kubernetes Worker Nodes](10-install-worker-node.md)
+**Next>** [ຕິດຕັ້ງ Kubernetes Worker Nodes](10-install-worker-node.md)
 
-**<Prev** [ติดตั้ง Kubernetes Control Plane](08-install_kubernetes_control_plane.md)
+**<Prev** [ຕິດຕັ້ງ Kubernetes Control Plane](08-install_kubernetes_control_plane.md)
